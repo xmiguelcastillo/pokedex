@@ -1,8 +1,10 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Kingler(props) {
-  const { nodes, materials } = useGLTF('/Kingler.glb')
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Kingler.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>
@@ -32,7 +34,7 @@ export function Kingler(props) {
         />
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/Kingler.glb')
+useGLTF.preload("/Kingler.glb");

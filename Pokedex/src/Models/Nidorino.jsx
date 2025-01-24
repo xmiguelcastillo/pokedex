@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Nidorino(props) {
-  const { nodes, materials } = useGLTF("/Nidorino.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Nidorino.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

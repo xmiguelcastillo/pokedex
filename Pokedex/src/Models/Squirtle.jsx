@@ -1,7 +1,9 @@
 import { useGLTF, PerspectiveCamera } from "@react-three/drei";
 
 export function Squirtle(props) {
-  const { nodes, materials } = useGLTF("/Squritle.gltf");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Squritle.gltf`,
+  );
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, Math.PI]}>

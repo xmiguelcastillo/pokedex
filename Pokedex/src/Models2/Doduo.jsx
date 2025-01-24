@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Doduo(props) {
-  const { nodes, materials } = useGLTF("/Doduo.glb");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Doduo.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

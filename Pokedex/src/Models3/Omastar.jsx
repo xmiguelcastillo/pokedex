@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Omastar(props) {
-  const { nodes, materials } = useGLTF("/Omastar.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Omastar.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>

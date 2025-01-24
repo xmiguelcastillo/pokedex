@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Blastoise(props) {
-  const { nodes, materials } = useGLTF("/Blastoise.gltf");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Blastoise.gltf`,
+  );
   return (
     <group {...props} dispose={null}>
       <group

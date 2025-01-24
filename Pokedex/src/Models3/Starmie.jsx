@@ -1,8 +1,10 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Starmie(props) {
-  const { nodes, materials } = useGLTF('/Starmie.glb')
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Starmie.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>
@@ -109,5 +111,5 @@ export function Starmie(props) {
       <primitive object={nodes.pm0104_00} />
       <primitive object={nodes.pm0105_00} />
     </group>
-  )
+  );
 }

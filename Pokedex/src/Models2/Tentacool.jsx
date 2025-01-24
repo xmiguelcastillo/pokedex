@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Tentacool(props) {
-  const { nodes, materials } = useGLTF("/Tentacool.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Tentacool.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

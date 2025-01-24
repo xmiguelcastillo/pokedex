@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Ivysaur(props) {
-  const { nodes, materials } = useGLTF("/Ivysaur.gltf");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Ivysaur.gltf`,
+  );
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, -Math.PI]} scale={0.505}>

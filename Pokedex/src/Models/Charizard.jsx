@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Charizard(props) {
-  const { nodes, materials } = useGLTF("/Charizard.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Charizard.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

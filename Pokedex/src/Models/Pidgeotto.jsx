@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Pidgeotto(props) {
-  const { nodes, materials } = useGLTF("/Pidgeotto.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Pidgeotto.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

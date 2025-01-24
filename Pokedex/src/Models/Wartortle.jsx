@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF, PerspectiveCamera } from "@react-three/drei";
 
 export function Wartortle(props) {
-  const { nodes, materials } = useGLTF("/Wartortle.gltf");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Wartortle.gltf`,
+  );
   return (
     <group {...props} dispose={null}>
       <PerspectiveCamera

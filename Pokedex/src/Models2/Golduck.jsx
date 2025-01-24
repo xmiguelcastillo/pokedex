@@ -1,9 +1,10 @@
-
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Golduck(props) {
-  const { nodes, materials } = useGLTF('/Golduck.glb')
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Golduck.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>
@@ -20,7 +21,7 @@ export function Golduck(props) {
           castShadow
           receiveShadow
           geometry={nodes.Golduck_1.geometry}
-          material={materials['Eye.019']}
+          material={materials["Eye.019"]}
         />
         <mesh
           castShadow
@@ -40,8 +41,7 @@ export function Golduck(props) {
       <primitive object={nodes.pm0033_00} />
       <primitive object={nodes._03_Waist} />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/Golduck.glb')
-
+useGLTF.preload("/Golduck.glb");

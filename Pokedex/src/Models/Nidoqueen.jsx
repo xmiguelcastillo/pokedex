@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Nidoqueen(props) {
-  const { nodes, materials } = useGLTF("/Nidoqueen.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Nidoqueen.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

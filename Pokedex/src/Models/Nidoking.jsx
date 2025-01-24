@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Nidoking(props) {
-  const { nodes, materials } = useGLTF("/Nidoking.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Nidoking.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

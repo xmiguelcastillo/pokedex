@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Kabuto(props) {
-  const { nodes, materials } = useGLTF('/Kabuto.glb')
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Kabuto.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>
@@ -52,7 +52,7 @@ export function Kabuto(props) {
       <primitive object={nodes.pm0135_00} />
       <primitive object={nodes.pm0136_00} />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/Kabuto.glb')
+useGLTF.preload("/Kabuto.glb");

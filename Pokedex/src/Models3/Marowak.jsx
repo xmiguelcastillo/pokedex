@@ -1,9 +1,10 @@
-
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Marowak(props) {
-  const { nodes, materials } = useGLTF('/Marowak.glb')
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Marowak.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>
@@ -32,8 +33,7 @@ export function Marowak(props) {
         skeleton={nodes.Marowak_2.skeleton}
       />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/Marowak.glb')
-
+useGLTF.preload("/Marowak.glb");

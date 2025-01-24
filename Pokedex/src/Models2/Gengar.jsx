@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Gengar(props) {
-  const { nodes, materials } = useGLTF("/Gengar.glb");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Gengar.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.021}>

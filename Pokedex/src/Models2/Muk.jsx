@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Muk(props) {
-  const { nodes, materials } = useGLTF("/Muk.glb");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Muk.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Kabutops(props) {
-  const { nodes, materials } = useGLTF("/Kabutops.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Kabutops.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>

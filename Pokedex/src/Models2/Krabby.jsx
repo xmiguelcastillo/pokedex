@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Krabby(props) {
-  const { nodes, materials } = useGLTF("/Krabby.glb");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Krabby.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>

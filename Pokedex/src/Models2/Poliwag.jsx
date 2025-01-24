@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Poliwag(props) {
-  const { nodes, materials } = useGLTF("/Poliwag.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Poliwag.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>

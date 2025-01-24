@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Psyduck(props) {
-  const { nodes, materials } = useGLTF("/Psyduck.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Psyduck.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

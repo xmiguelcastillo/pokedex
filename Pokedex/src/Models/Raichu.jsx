@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Raichu(props) {
-  const { nodes, materials } = useGLTF("/Raichu.glb");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Raichu.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Mewtwo(props) {
-  const { nodes, materials } = useGLTF('/Mewtwo.glb')
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Mewtwo.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>
@@ -60,16 +60,16 @@ export function Mewtwo(props) {
       <primitive object={nodes.pm0150_00} />
       <skinnedMesh
         geometry={nodes.Mewtwo_1.geometry}
-        material={materials['Material__35.002']}
+        material={materials["Material__35.002"]}
         skeleton={nodes.Mewtwo_1.skeleton}
       />
       <skinnedMesh
         geometry={nodes.Mewtwo_2.geometry}
-        material={materials['Material__36.002']}
+        material={materials["Material__36.002"]}
         skeleton={nodes.Mewtwo_2.skeleton}
       />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/Mewtwo.glb')
+useGLTF.preload("/Mewtwo.glb");

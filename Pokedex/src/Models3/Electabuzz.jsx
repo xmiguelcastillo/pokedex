@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Electabuzz(props) {
-  const { nodes, materials } = useGLTF("/Electabuzz.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Electabuzz.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>

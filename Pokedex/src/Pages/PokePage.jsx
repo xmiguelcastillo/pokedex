@@ -25,7 +25,6 @@ import { Charmander } from "../Models/Charmander";
 import { Pikachu } from "../Models/Pikachu";
 import { Butterfree } from "../Models/Butterfree";
 import { Metapod } from "../Models/Metapod";
-import PokeColor from "../Components/PokeColor";
 import { Caterpie } from "../Models/Caterpie";
 import { Charmeleon } from "../Models/Charmeleon";
 import { Charizard } from "../Models/Charizard";

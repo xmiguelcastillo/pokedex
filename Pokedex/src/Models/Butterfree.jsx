@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Butterfree(props) {
-  const { nodes, materials } = useGLTF("/Butterfree.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Butterfree.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>

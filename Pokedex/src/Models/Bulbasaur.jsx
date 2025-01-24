@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Bulbasaur(props) {
-  const { nodes, materials } = useGLTF("/Bulbasaur.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Bulbasaur.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, -Math.PI]} scale={0.684}>
@@ -85,5 +87,4 @@ export function Bulbasaur(props) {
     </group>
   );
 }
-
-useGLTF.preload("/Bulbasaur.glb");
+useGLTF.preload(`${import.meta.env.BASE_URL}Bulbasaur.glb`); // Adjusted path for preloading

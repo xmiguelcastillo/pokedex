@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Onix(props) {
-  const { nodes, materials } = useGLTF("/Onix.glb");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Onix.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>

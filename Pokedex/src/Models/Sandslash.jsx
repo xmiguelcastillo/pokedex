@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Sandslash(props) {
-  const { nodes, materials } = useGLTF("/Sandslash.glb");
+const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Sandslash.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

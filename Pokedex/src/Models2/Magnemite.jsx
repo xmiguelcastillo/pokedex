@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Magnemite(props) {
-  const { nodes, materials } = useGLTF("/Magnemite.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Magnemite.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

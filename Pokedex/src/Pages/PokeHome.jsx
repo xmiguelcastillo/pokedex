@@ -12,49 +12,8 @@ import { Blastoise } from "../Models/Blastoise";
 import { Bulbasaur } from "../Models/Bulbasaur";
 import { Ivysaur } from "../Models/Ivysaur";
 import { Venusaur } from "../Models/Venusaur";
-import { Charmander } from "../Models/Charmander";
-import { Pikachu } from "../Models/Pikachu";
-import { Butterfree } from "../Models/Butterfree";
-import { Metapod } from "../Models/Metapod";
-import { Caterpie } from "../Models/Caterpie";
-import { Charmeleon } from "../Models/Charmeleon";
-import { Charizard } from "../Models/Charizard";
-import { Kakuna } from "../Models/Kakuna";
-import { Beedrill } from "../Models/Beedrill";
-import { Pidgeotto } from "../Models/Pidgeotto";
-import { Pidgeot } from "../Models/Pidgeot";
-import { Sandslash } from "../Models/Sandslash";
-import { Sandshrew } from "../Models/Sandshrew";
-import { Spearow } from "../Models/Spearow";
-import { Fearow } from "../Models/Fearow";
-import { Weedle } from "../Models/Weedle";
-import { Pidgey } from "../Models/Pidgey";
-import { Rattata } from "../Models/Rattata";
-import { Raticate } from "../Models/Raticate";
-import { Raichu } from "../Models/Raichu";
-import { Arbok } from "../Models/Arbok";
-import { Ekans } from "../Models/Ekans";
-import { Nidorina } from "../Models/Nidorina";
-import { Nidoqueen } from "../Models/Nidoqueen";
-import { Nidorino } from "../Models/Nidorino";
-import { Nidoking } from "../Models/Nidoking";
-import { Vulpix } from "../Models/Vulpix";
-import { Ninetales } from "../Models/Ninetales";
-import { Jigglypuff } from "../Models/Jigglypuff";
-import { Wigglytuff } from "../Models/Wigglytuff";
-import { Clefable } from "../Models/Clefable";
-import { Golbat } from "../Models/Golbat";
-import { Zubat } from "../Models/Zubat";
-import { Oddish } from "../Models/Oddish";
-import { Gloom } from "../Models/Gloom";
-import { Vileplume } from "../Models/Vileplume";
-import { Paras } from "../Models/Paras";
-import { Parasect } from "../Models/Parasect";
-import { Venonat } from "../Models/Venonat";
-import { Venomoth } from "../Models/Venomoth";
-import { Diglett } from "../Models/Diglett";
 import { Link } from "react-router-dom";
-import { Dugtrio } from "../Models2/Dugtrio";
+
 export default function PokeHome() {
   const { pokemonName } = useParams();
 
@@ -70,48 +29,6 @@ export default function PokeHome() {
     bulbasaur: Bulbasaur,
     ivysaur: Ivysaur,
     venusaur: Venusaur,
-    ekans: Ekans,
-    arbok: Arbok,
-    pikachu: Pikachu,
-    raichu: Raichu,
-    butterfree: Butterfree,
-    caterpie: Caterpie,
-    metapod: Metapod,
-    charmander: Charmander,
-    charmeleon: Charmeleon,
-    charizard: Charizard,
-    weedle: Weedle,
-    kakuna: Kakuna,
-    beedrill: Beedrill,
-    pidgey: Pidgey,
-    pidgeotto: Pidgeotto,
-    pidgeot: Pidgeot,
-    rattata: Rattata,
-    raticate: Raticate,
-    spearow: Spearow,
-    fearow: Fearow,
-    sandslash: Sandslash,
-    sandshrew: Sandshrew,
-    nidorina: Nidorina,
-    nidoqueen: Nidoqueen,
-    nidorino: Nidorino,
-    nidoking: Nidoking,
-    vulpix: Vulpix,
-    ninetales: Ninetales,
-    jigglypuff: Jigglypuff,
-    wigglytuff: Wigglytuff,
-    clefable: Clefable,
-    zubat: Zubat,
-    golbat: Golbat,
-    oddish: Oddish,
-    gloom: Gloom,
-    vileplume: Vileplume,
-    paras: Paras,
-    parasect: Parasect,
-    venonat: Venonat,
-    venomoth: Venomoth,
-    diglett: Diglett,
-    dugtrio: Dugtrio,
   };
 
   const renderModels = () => {
@@ -167,7 +84,7 @@ export default function PokeHome() {
         const pokeData = [];
         const pokeNumbers = [];
 
-        for (let i = 1; i <= 9; i++) {
+        for (let i = 1; i <= 2; i++) {
           const response = await fetch(
             `https://pokeapi.co/api/v2/pokemon-species/${i}/`,
           );

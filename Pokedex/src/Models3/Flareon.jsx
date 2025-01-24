@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Flareon(props) {
-  const { nodes, materials } = useGLTF("/Flareon.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Flareon.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>

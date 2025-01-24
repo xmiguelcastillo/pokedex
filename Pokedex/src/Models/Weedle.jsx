@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Weedle(props) {
-  const { nodes, materials } = useGLTF("/Weedle.glb");
+  const { nodes, materials } = useGLTF(`${import.meta.env.BASE_URL}Weedle.glb`);
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

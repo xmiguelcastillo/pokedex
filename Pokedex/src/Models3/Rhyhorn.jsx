@@ -1,9 +1,10 @@
-
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Rhyhorn(props) {
-  const { nodes, materials } = useGLTF('/Rhyhorn.glb')
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Rhyhorn.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>
@@ -32,15 +33,14 @@ export function Rhyhorn(props) {
         />
         <skinnedMesh
           geometry={nodes.mesh_6_BodyASpc01_2.geometry}
-          material={materials['Eye_mat.007']}
+          material={materials["Eye_mat.007"]}
           skeleton={nodes.mesh_6_BodyASpc01_2.skeleton}
         />
       </group>
       <primitive object={nodes.pm0104_00} />
       <primitive object={nodes.pm0105_00} />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/Rhyhorn.glb')
-
+useGLTF.preload("/Rhyhorn.glb");

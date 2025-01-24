@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Persian(props) {
-  const { nodes, materials } = useGLTF("/Persian.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Persian.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

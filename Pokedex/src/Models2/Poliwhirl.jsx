@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Poliwhirl(props) {
-  const { nodes, materials } = useGLTF("/Poliwhirl.glb");
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Poliwhirl.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.023}>

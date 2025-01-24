@@ -1,8 +1,10 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from "react";
+import { useGLTF } from "@react-three/drei";
 
 export function Lickitung(props) {
-  const { nodes, materials } = useGLTF('/Lickitung.glb')
+  const { nodes, materials } = useGLTF(
+    `${import.meta.env.BASE_URL}Lickitung.glb`,
+  );
   return (
     <group {...props} dispose={null}>
       <group scale={0.025}>
@@ -22,7 +24,7 @@ export function Lickitung(props) {
           castShadow
           receiveShadow
           geometry={nodes.mesh_4_BodyVco.geometry}
-          material={materials['Body_mat.003']}
+          material={materials["Body_mat.003"]}
         />
         <mesh
           castShadow
@@ -34,7 +36,7 @@ export function Lickitung(props) {
       <primitive object={nodes.pm0104_00} />
       <primitive object={nodes.pm0105_00} />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/Lickitung.glb')
+useGLTF.preload("/Lickitung.glb");
