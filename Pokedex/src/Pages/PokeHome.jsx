@@ -84,7 +84,7 @@ export default function PokeHome() {
         const pokeData = [];
         const pokeNumbers = [];
 
-        for (let i = 1; i <= 2; i++) {
+        for (let i = 1; i <= 3; i++) {
           const response = await fetch(
             `https://pokeapi.co/api/v2/pokemon-species/${i}/`,
           );
