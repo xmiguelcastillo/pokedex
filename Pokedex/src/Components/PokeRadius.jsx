@@ -63,7 +63,7 @@ function PokeRadius({ pokemonURL }) {
     <>
       {/* Background Effect */}
       <div
-        className={`w-[300px] h-[400px] rounded-full absolute lg:top-[35%] top-[30%] lg:top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[150px] z-0 pointer-events-none transition-all duration-1000`}
+        className={`w-[300px] sm:w-[600px] sm:h-[600px] lg:w-[900px] lg:h-[900px] h-[400px] rounded-full absolute lg:top-[35%] top-[30%] lg:top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] blur-[150px] z-0 pointer-events-none transition-all duration-1000`}
         style={{
           background: `radial-gradient(circle at center, ${backGround} 0%, transparent 70%)`,
         }}
@@ -87,5 +87,4 @@ function PokeRadius({ pokemonURL }) {
   );
 }
 
-// Wrap the PokeRadius component with React.memo
 export default React.memo(PokeRadius);
