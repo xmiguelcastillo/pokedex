@@ -15,8 +15,6 @@ import { useParams } from "react-router-dom";
 import { Wartortle } from "../Models/Wartortle";
 import { Squirtle } from "../Models/Squirtle";
 import { Blastoise } from "../Models/Blastoise";
-import RightIcon from "../assets/rightIcon";
-import LeftIcon from "../assets/leftIcon";
 import { Link } from "react-router-dom";
 import { Bulbasaur } from "../Models/Bulbasaur";
 import { Ivysaur } from "../Models/Ivysaur";
@@ -205,7 +203,7 @@ export default function PokePage() {
     const nextPokemon = pokeMons[nextIndex];
     return (
       <Link to={`/${nextPokemon}`}>
-        <RightIcon />
+        <div className="text-3xl">{">"}</div>
       </Link>
     );
   };
@@ -219,7 +217,7 @@ export default function PokePage() {
     const prevPokemon = pokeMons[prevIndex];
     return (
       <Link to={`/${prevPokemon}`}>
-        <LeftIcon />
+        <div className="text-3xl">{"<"}</div>
       </Link>
     );
   };

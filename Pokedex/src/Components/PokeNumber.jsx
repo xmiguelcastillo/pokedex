@@ -48,30 +48,27 @@ const PokeNumber = ({ pokemonURL }) => {
 
   const handleSearch = () => {
     if (searchTerm.trim() !== "") {
-      window.location.href = `/${searchTerm.toLowerCase()}`;
+      window.location.href = `/pokedex/${searchTerm.toLowerCase()}`;
     }
   };
 
   return (
     <div className="relative flex flex-col items-center mt-10">
-      {/* Top Row */}
       <div className="flex flex-row items-center justify-between w-[400px]">
         {/* Left element (PokeCenter) */}
-        <div className="w-1/3 flex h-[70px] pl-2 pt-6  pr-16 justify-end">
-          <Link to="/" className="cursor-pointer w-full h-full">
-            <HomeIcon />
+        <div className="w-1/3 flex h-[70px] pl-5 items-center justify-start relative z-50">
+          <Link to="/" className="cursor-pointer">
+            <HomeIcon className="w-10 h-10" />
           </Link>
         </div>
 
-        {/* Center element (pokemon number or loading) */}
         <div className="text-2xl text-center font-extrabold w-1/3">
           #{error ? <span>Error: {error}</span> : pokemonNumber || "Loading..."}
         </div>
 
-        {/* Right element (Canvas with PokeBall) */}
         <div
-          className="w-1/3 flex h-[70px] pb-2 pl-16 justify-end cursor-pointer"
-          onClick={handlePokeBallClick} // Trigger the search box visibility
+          className="w-1/3 flex h-[70px] pb-2 pl-16 z-50 justify-end cursor-pointer"
+          onClick={handlePokeBallClick}
         >
           <Canvas shadows camera={{ position: [150, -15, 1] }}>
             <Environment preset="city" />
@@ -87,15 +84,14 @@ const PokeNumber = ({ pokemonURL }) => {
         </div>
       </div>
 
-      {/* Search Box */}
       {showSearch && (
         <div
-          className="absolute inset-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-100"
+          className="absolute inset-0 w-full z-50 h-full flex items-center justify-center bg-black bg-opacity-50 z-100"
           onClick={() => setShowSearch(false)}
         >
           <div
             className="bg-[#151515] shadow-black p-6 rounded-lg shadow-lg flex flex-col"
-            onClick={(e) => e.stopPropagation()} // Prevents clicks on the modal content from closing it
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="text-white flex items-center justify-center mb-2 font-bold text-lg">
               Pokedex (Gen 1)
